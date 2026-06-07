@@ -222,3 +222,6 @@ __marimo__/
 .env
 vector_store/
 .venv/
+db.sqlite3
+__pycache__/
+*.pyc
