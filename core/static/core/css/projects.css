@@ -1,0 +1,112 @@
+.projects-hero {
+  padding: 5rem 2.5rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.projects-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.projects-hero h1 span { color: var(--accent2); }
+
+.projects-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2.5rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.25s, transform 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.project-card:hover { border-color: rgba(220,38,38,0.45); transform: translateY(-4px); }
+.project-card:hover::before { opacity: 1; }
+.project-card.featured { border-color: rgba(220,38,38,0.35); }
+.project-card.featured::before { opacity: 1; }
+
+.project-status { display: flex; align-items: center; gap: 0.5rem; }
+
+.status-dot { width: 7px; height: 7px; border-radius: 50%; }
+.status-dot.active { background: #22c55e; animation: pulse 2s infinite; }
+.status-dot.done { background: var(--muted); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+}
+
+.status-text {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.project-org {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent2);
+  margin-top: -0.5rem;
+}
+
+.project-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+  flex: 1;
+}
+
+.project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.project-highlight {
+  background: rgba(220,38,38,0.08);
+  border: 1px solid rgba(220,38,38,0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent2);
+  line-height: 1.6;
+}
+
+.project-highlight strong {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}

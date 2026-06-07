@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% block title %}Projects — Awez Haider{% endblock %}
+
+{% block extra_head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/projects.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<section class="projects-hero">
+  <p class="section-label">// my work</p>
+  <h1>Things I've <span>built</span></h1>
+</section>
+
+<div class="projects-grid">
+
+  <div class="project-card featured">
+    <div class="project-status">
+      <div class="status-dot active"></div>
+      <span class="status-text">active</span>
+    </div>
+    <div>
+      <h2 class="project-title">Aquelious — Aquaculture Monitor</h2>
+      <p class="project-org">Technical Lead · Aquelious</p>
+    </div>
+    <p class="project-desc">
+      Real-time water quality monitoring system for aquaculture farmers.
+      Detects harmful parameter changes using signal processing and ML-based anomaly detection,
+      triggering alerts before fish populations are at risk.
+    </p>
+    <div class="project-highlight">
+      <strong>// what I built</strong>
+      End-to-end signal processing pipeline · noise filtering (Kalman, Butterworth, Gaussian) ·
+      lag-based anomaly detection · z-score flagging · ML predictive model (in progress)
+    </div>
+    <div class="project-tags">
+      <span class="tag">Python</span>
+      <span class="tag">Signal Processing</span>
+      <span class="tag">Scikit-learn</span>
+      <span class="tag">Anomaly Detection</span>
+      <span class="tag">Pandas</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-status">
+      <div class="status-dot done"></div>
+      <span class="status-text">completed</span>
+    </div>
+    <div>
+      <h2 class="project-title">Tata Steel — Dashboard & RAG Chatbot</h2>
+      <p class="project-org">Summer Intern · Tata Steel, SNTI (Tata Prashikshan)</p>
+    </div>
+    <p class="project-desc">
+      Machine performance analytics dashboard and RAG-powered internal chatbot
+      for Tata Steel engineers. Tracks machine-wise metrics, shift performance,
+      deviation analysis, and gas cutting data.
+    </p>
+    <div class="project-highlight">
+      <strong>// what I built</strong>
+      Power BI dashboard on PostgreSQL · Python CSV ingestion pipeline ·
+      RAG chatbot (LangChain + FAISS + Groq) · Django backend
+    </div>
+    <div class="project-tags">
+      <span class="tag">Power BI</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">LangChain</span>
+      <span class="tag">FAISS</span>
+      <span class="tag">Groq</span>
+      <span class="tag">Django</span>
+    </div>
+  </div>
+
+  <div class="project-card featured">
+    <div class="project-status">
+      <div class="status-dot active"></div>
+      <span class="status-text">active · you're using it</span>
+    </div>
+    <div>
+      <h2 class="project-title">RON — AI Portfolio Chatbot</h2>
+      <p class="project-org">Personal Project · Solo</p>
+    </div>
+    <p class="project-desc">
+      This site's AI assistant. Built to understand RAG architecture end-to-end
+      by implementing it from first principles. RON answers recruiter and technical
+      questions about me, 24/7.
+    </p>
+    <div class="project-highlight">
+      <strong>// what I built</strong>
+      Full RAG pipeline · LangChain LCEL chain · Django + DRF API ·
+      FAISS vector store · Docker + CI/CD + Railway
+    </div>
+    <div class="project-tags">
+      <span class="tag">LangChain</span>
+      <span class="tag">FAISS</span>
+      <span class="tag">Django</span>
+      <span class="tag">DRF</span>
+      <span class="tag">Docker</span>
+      <span class="tag">GitHub Actions</span>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-status">
+      <div class="status-dot done"></div>
+      <span class="status-text">completed · your typical email filter</span>
+    </div>
+    <div>
+      <h2 class="project-title">ML powered Spam Detector</h2>
+      <p class="project-org">Personal Project · Solo</p>
+    </div>
+    <p class="project-desc">
+      Built an end to end Spam Detector using NLP concepts and minimal scikit-learn library usage to understand fundamental concepts.
+    </p>
+    <div class="project-highlight">
+      <strong>// what I built</strong>
+      Full ML model · ML · NLP · Spam-Detector · Vectorizer · Pickle · Flask · Full-Stack Web App
+    </div>
+    <div class="project-tags">
+      <span class="tag">ML</span>
+      <span class="tag">NLP</span>
+      <span class="tag">Naive Bayes</span>
+      <span class="tag">Flask</span>
+      <span class="tag">Pickle</span>
+      <span class="tag">GitHub</span>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-status">
+      <div class="status-dot done"></div>
+      <span class="status-text">completed · Linear Regression from scratch</span>
+    </div>
+    <div>
+      <h2 class="project-title">House Price prediction model from scratch</h2>
+      <p class="project-org">Personal Project · Solo</p>
+    </div>
+    <p class="project-desc">
+      Built an end to end ML algorithm without using major libraries like scikit-learn. Built strong fundamentals in concepts like Deep Learning and Regression Models.
+    </p>
+    <div class="project-highlight">
+      <strong>// what I built</strong>
+      Full ML model · ML · Linear Regression · House Price Prediction · Kaggle · Pickle · Flask · Full-Stack Web App
+    </div>
+    <div class="project-tags">
+      <span class="tag">ML</span>
+      <span class="tag">Linear Regression</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">Pickle</span>
+      <span class="tag">Kaggle</span>
+      <span class="tag">Flask</span>
+      <span class="tag">GitHub</span>
+    </div>
+  </div>
+  <div class="project-card featured">
+    <div class="project-status">
+      <div class="status-dot done"></div>
+      <span class="status-text">completed · Sales and Viability Prediction</span>
+    </div>
+    <div>
+      <h2 class="project-title">Sales and Viability prediction on sample Dataset</h2>
+      <p class="project-org">Personal Project · Team</p>
+    </div>
+    <p class="project-desc">
+      Used multiple Regression and Classification workflows using ML for sales and viability prediction on a sample dataset.
+    </p>
+    <div class="project-highlight">
+      <strong>// what I built</strong>
+      Full ML model · ML · Linear Regression · Decision Tree · Random Forest · Classification · House Price Prediction · Kaggle · Pickle · Flask · Full-Stack Web App
+    </div>
+    <div class="project-tags">
+      <span class="tag">ML</span>
+      <span class="tag">Linear Regression</span>
+      <span class="tag">Random Forest</span>
+      <span class="tag">Decision Tree</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">Pickle</span>
+      <span class="tag">Kaggle</span>
+      <span class="tag">Flask</span>
+      <span class="tag">GitHub</span>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

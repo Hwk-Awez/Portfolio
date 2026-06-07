@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Awez Haider — AI/ML Engineer{% endblock %}
+
+{% block extra_head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/home.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="hero-pre">| print("hello world, I am Haider")</p>
+  <h1 class="hero-name">Mohammad<br/>Awez <span class="accent">Haider</span></h1>
+  <p class="hero-role">
+    <span class="highlight">AI/ML Engineer</span> &nbsp;·&nbsp; Working across Startups &nbsp;·&nbsp; B.Tech CSE (AI/ML)
+  </p>
+  <p class="hero-desc">
+    I build production-grade AI systems — not just notebooks.
+    From clumsy datasets to RAG-powered chatbots, I work at the intersection
+    of real engineering and real impact.
+  </p>
+  <div class="hero-tags">
+    <span class="tag">Python</span>
+    <span class="tag">LangChain</span>
+    <span class="tag">HuggingFace</span>
+    <span class="tag">Django</span>
+    <span class="tag">Flask</span>
+    <span class="tag">RAG</span>
+    <span class="tag">Signal Processing</span>
+    <span class="tag">PostgreSQL</span>
+    <span class="tag">MySQL</span>
+    <span class="tag">Docker</span>
+    <span class="tag">CI/CD Pipelines</span>
+  </div>
+  <div class="hero-cta">
+    <a href="/projects/" class="btn-primary">Wanna browse my projects?</a>
+    <a href="/contact/" class="btn-outline">get in touch</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><span class="stat-num">9.5</span><span class="stat-label">CGPA</span></div>
+    <div class="stat"><span class="stat-num">3+</span><span class="stat-label">organisations</span></div>
+    <div class="stat"><span class="stat-num">5+</span><span class="stat-label">certifications</span></div>
+    <div class="stat"><span class="stat-num">∞</span><span class="stat-label">projects</span></div>
+    <div class="stat"><span class="stat-num">Top 2%</span><span class="stat-label">NPTEL rank</span></div>
+  </div>
+</section>
+
+<section class="about-strip">
+  <div class="about-inner">
+    <div>
+      <p class="section-label">// about me</p>
+      <h2 class="about-title">Engineer.<br/>Builder.<br/><span>Problem solver.</span></h2>
+    </div>
+    <div class="about-body">
+      <p>I'm a third-year CSE student at C.V. Raman Global University specialising in AI/ML,
+      currently leading engineering at Startups and Self-driven projects..</p>
+      <p>I completed a summer internship at Tata Steel (SNTI Institute), where I built
+      a Power BI dashboard on PostgreSQL and developed a RAG-powered internal chatbot.
+      I don't copy-paste from AI — I understand every line I write.</p>
+      <p>Outside of code, I hold a black belt in martial arts with national-level medals —
+      the same discipline that drives how I approach engineering.</p>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section">
+  <p class="section-label">// tech stack</p>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-title">languages</div>
+      <div class="skill-list">
+        <span class="tag">Python</span><span class="tag">C++</span>
+        <span class="tag">C</span><span class="tag">Java</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">AI / ML</div>
+      <div class="skill-list">
+        <span class="tag">LangChain</span><span class="tag">FAISS</span>
+        <span class="tag">Groq</span><span class="tag">Scikit-learn</span>
+        <span class="tag">RAG</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">backend</div>
+      <div class="skill-list">
+        <span class="tag">Django</span><span class="tag">DRF</span>
+        <span class="tag">Flask</span><span class="tag">FastAPI</span>
+        <span class="tag">PostgreSQL</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">devops</div>
+      <div class="skill-list">
+        <span class="tag">Docker</span><span class="tag">GitHub Actions</span>
+        <span class="tag">Railway</span><span class="tag">Power BI</span>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
