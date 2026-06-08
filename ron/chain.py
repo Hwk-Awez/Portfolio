@@ -58,3 +58,12 @@ Answer:""")
 
 def ask_ron(question):
     return get_chain()(question)
+
+if __name__ == "__main__":
+    questions = [
+        "What projects has Haider worked on?",
+        "What is Haider's CGPA?",
+    ]
+    for q in questions:
+        print(f"\nQ: {q}")
+        print(f"RON: {ask_ron(q)}")
