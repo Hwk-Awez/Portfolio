@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
@@ -24,7 +24,7 @@ splitter = RecursiveCharacterTextSplitter(
 chunks = splitter.split_documents(documents)
 print(f'Splitted into {len(chunks)} chunks...')
 
-embeddings = HuggingFaceEmbeddings(
+embeddings = FastEmbedEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
 
