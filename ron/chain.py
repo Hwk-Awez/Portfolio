@@ -11,14 +11,15 @@ def get_chain():
         return _chain
 
     from langchain_community.vectorstores import FAISS
-    from langchain_community.embeddings import FastEmbedEmbeddings
+    from langchain_huggingface import HuggingFaceEndpointEmbeddings
     from langchain_groq import ChatGroq
     from langchain_core.prompts import ChatPromptTemplate
     from langchain_core.output_parsers import StrOutputParser
 
-    embeddings = FastEmbedEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
-    )
+    embeddings = HuggingFaceEndpointEmbeddings(
+    model="sentence-transformers/all-MiniLM-L6-v2",
+    huggingfacehub_api_token=os.getenv("HUGGINGFACE_API_TOKEN")
+)
     vectorstore = FAISS.load_local(
         "vector_store",
         embeddings,
