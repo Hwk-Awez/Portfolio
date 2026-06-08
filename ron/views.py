@@ -1,10 +1,17 @@
-from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.permissions import AllowAny
+from rest_framework.authentication import SessionAuthentication
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 from .chain import ask_ron
 
+@method_decorator(csrf_exempt, name='dispatch')
 class RonChatView(APIView):
+    authentication_classes = []
+    permission_classes = [AllowAny]
+
     def post(self, request):
         question = request.data.get("question", "").strip()
         if not question:
