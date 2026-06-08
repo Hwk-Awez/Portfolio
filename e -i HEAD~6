@@ -1,0 +1,17 @@
+[33ma67a933[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m fix: run ingest at startup not build time
+[33mcc6dd14[m deadpool theme
+[33m4ed678b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m fix: HuggingFace API embeddings, remove fastembed dependency
+[33mee7dca6[m deadpool theme
+[33m41744ae[m deadpool theme
+[33m0e2c4ad[m fix: lazy load RAG chain to reduce startup memory
+[33m3a8add7[m fix: lazy load RAG chain to reduce startup memory
+[33m9677c39[m fix: static files, whitenoise, collectstatic in Docker
+[33m8c61c53[m fix: switched to fastembed, no torch dependency
+[33m36315c8[m docker: Dockerfile and .dockerignore added
+[33m6e440ac[m deadpool theme
+[33m2376386[m ron: DRF API endpoint working, RON answering correctly
+[33m76cb550[m ron: RAG chain working with LCEL and Groq
+[33m002ba3e[m ron: ingest pipeline working, vector store generated
+[33md9f89c1[m added knowledge base
+[33m413cbc5[m init django scaffold
+[33m8e4b3f9[m Initial commit
