@@ -13,7 +13,7 @@ def get_chain():
     from langchain_community.vectorstores import FAISS
     from langchain_community.embeddings import FastEmbedEmbeddings
     from langchain_groq import ChatGroq
-    from langchain.prompts import ChatPromptTemplate
+    from langchain_core.prompts import ChatPromptTemplate
     from langchain_core.output_parsers import StrOutputParser
 
     embeddings = FastEmbedEmbeddings(
