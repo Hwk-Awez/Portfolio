@@ -7,6 +7,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+ARG HUGGINGFACE_API_TOKEN
+ENV HUGGINGFACE_API_TOKEN=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
+
 RUN python ron/ingest.py
 RUN python manage.py collectstatic --noinput
 
